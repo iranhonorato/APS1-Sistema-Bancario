@@ -13,6 +13,24 @@ public class Cliente {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.salario = salario;
-    }
+    };
 
-}
+    public String getCpf() {
+        return this.cpf;
+    };
+
+    public String getNome() {
+        return this.nome;
+    };
+
+    public LocalDate getDataNascimento() {
+        return this.dataNascimento;
+    };
+
+
+    public Float getSalario() {
+        return this.salario;
+    };
+
+
+};
