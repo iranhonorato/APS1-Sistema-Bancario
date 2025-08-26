@@ -15,42 +15,23 @@ public class Cartao {
         this.status = status;
     };
 
-    public String getNumeroCartao() {
-        return this.numeroCartao;
-    };
+    public String getNumeroCartao() { return this.numeroCartao; };
+
+    public String getTipo() { return this.tipo; };
+
+    public LocalDate getValidade() { return this.validade; };
+
+    public String getStatus() { return this.status; };
 
 
-    public String getTipo() {
-        return this.tipo;
-    };
+    public void setNumeroCartao(String numeroCartao) { this.numeroCartao = numeroCartao; };
 
 
-    public LocalDate getValidade() {
-        return this.validade;
-    };
-
-    public String getStatus() {
-        return this.status;
-    };
+    public void setTipo(String tipo) { this.tipo = tipo; };
 
 
-    public void setNumeroCartao(String numeroCartao) {
-        this.numeroCartao = numeroCartao;
-    };
+    public void setValidade(LocalDate validade) { this.validade = validade; };
 
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    };
-
-
-    public void setValidade(LocalDate validade) {
-        this.validade = validade;
-    };
-
-
-
-    public void setSatus(String status) {
-        this.status = status;
-    };
+    public void setSatus(String status) { this.status = status; };
 }
