@@ -29,5 +29,13 @@ public class ContaCorrente {
         return this.limite;
     };
 
+    public void setAgencia(String agencia) {
+        this.agencia = agencia;
+    };
+
+
+    public void setNumero (String numero) {
+        this.numero = numero;
+    }
 
 }
