@@ -25,4 +25,24 @@ public class ContaCorrente {
 
     public void setNumero (String numero) { this.numero = numero; };
 
+    public void saque(Float valor) {
+        if (valor >= 0) {
+            if (this.saldo >= valor) {
+                this.saldo -= valor;
+            } else {
+                System.out.println("Saldo insuficiente");
+            };
+        } else {
+            System.out.println("Escolha um valor positivo");
+        };
+    };
+
+    public void deposito(Float valor) {
+        if (valor >= 0) {
+            this.saldo += valor;
+        } else {
+            System.out.println("Escolha um valor positivo");
+        }
+    }
+
 }
