@@ -13,31 +13,16 @@ public class ContaCorrente {
         this.limite = limite;
     };
 
-    public String getAgencia() {
-        return this.agencia;
-    };
+    public String getAgencia() { return this.agencia; };
 
-    public String getNumero () {
-        return this.numero;
-    };
+    public String getNumero () { return this.numero; };
 
-    public Float getSaldo() {
-        return this.saldo;
-    };
+    public Float getSaldo() { return this.saldo; };
 
-    public Float getLimite() {
-        return this.limite;
-    };
+    public Float getLimite() { return this.limite; };
 
+    public void setAgencia(String agencia) { this.agencia = agencia; };
 
-    public void setAgencia(String agencia) {
-        this.agencia = agencia;
-    };
-
-    public void setNumero (String numero) {
-        this.numero = numero;
-    };
-
-
+    public void setNumero (String numero) { this.numero = numero; };
 
 }
