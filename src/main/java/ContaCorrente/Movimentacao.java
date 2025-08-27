@@ -10,9 +10,13 @@ public class Movimentacao {
         this.valor = valor;
         this.tipo = tipo;
         this.data = data;
-    }
+    };
 
+    public Float getValor() { return this.valor; };
 
+    public String getTipo() { return this.tipo;};
+
+    public LocalDate getData() { return this.data; };
 }
 
 
