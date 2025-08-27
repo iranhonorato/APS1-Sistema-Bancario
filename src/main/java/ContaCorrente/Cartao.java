@@ -30,4 +30,13 @@ public class Cartao {
     public void setValidade(LocalDate validade) { this.validade = validade; };
 
     public void setSatus(String status) { this.status = status; };
+
+    public Boolean isExpired(LocalDate dataAtual) {
+        if (dataAtual.isAfter(this.validade) || dataAtual.isEqual(this.validade)) {
+            return true;
+        };
+        return false;
+    };
+
+
 }
