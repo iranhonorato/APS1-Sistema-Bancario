@@ -23,15 +23,11 @@ public class Cartao {
 
     public String getStatus() { return this.status; };
 
-
     public void setNumeroCartao(String numeroCartao) { this.numeroCartao = numeroCartao; };
-
 
     public void setTipo(String tipo) { this.tipo = tipo; };
 
-
     public void setValidade(LocalDate validade) { this.validade = validade; };
-
 
     public void setSatus(String status) { this.status = status; };
 }
