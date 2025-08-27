@@ -38,5 +38,15 @@ public class Cartao {
         return false;
     };
 
+    public Boolean cancelaCartao() {
+        if (this.status == "ATIVO") {
+            this.status = "CANCELADO";
+            return true;
+        } else if (this.status == "CANCELADO") {
+            this.status = "ATIVO";
+        }
+        return false;
+    };
+
 
 }
