@@ -33,4 +33,21 @@ public class Cliente {
     };
 
 
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setdataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public void setSalario(Float salario) {
+        this.salario = salario;
+    }
+
+
 };
