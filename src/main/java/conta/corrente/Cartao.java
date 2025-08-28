@@ -7,12 +7,14 @@ public class Cartao {
     private String tipo;
     private LocalDate validade;
     private String status;
+    private ContaCorrente contaCorrente;
 
-    public Cartao(String numeroCartao, String tipo, LocalDate validade, String status) {
+    public Cartao(String numeroCartao, String tipo, LocalDate validade, String status, ContaCorrente contaCorrente) {
         this.numeroCartao = numeroCartao;
         this.tipo = tipo;
         this.validade = validade;
         this.status = status;
+        this.contaCorrente = contaCorrente;
     };
 
     public String getNumeroCartao() { return this.numeroCartao; };
@@ -22,6 +24,8 @@ public class Cartao {
     public LocalDate getValidade() { return this.validade; };
 
     public String getStatus() { return this.status; };
+
+    public ContaCorrente getContaCorrente() { return this.contaCorrente; };
 
     public void setNumeroCartao(String numeroCartao) { this.numeroCartao = numeroCartao; };
 
