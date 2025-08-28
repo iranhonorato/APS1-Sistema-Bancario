@@ -19,6 +19,9 @@ public class Movimentacao {
     public String getTipo() { return this.tipo;};
 
     public LocalDate getData() { return this.data; };
+
+    public ContaCorrente getContaCorrente() { return this.contaCorrente; };
+
 }
 
 
