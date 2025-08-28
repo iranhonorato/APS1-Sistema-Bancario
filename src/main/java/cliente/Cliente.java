@@ -1,6 +1,6 @@
-package Cliente;
+package cliente;
 import java.time.LocalDate;
-import ContaCorrente.ContaCorrente;
+import conta.corrente.ContaCorrente;
 
 public class Cliente {
     private String cpf;
@@ -9,11 +9,12 @@ public class Cliente {
     private Float salario;
     private ContaCorrente  contaCorrente;
 
-    public Cliente(String cpf, String nome, LocalDate dataNascimento, Float salario) {
+    public Cliente(String cpf, String nome, LocalDate dataNascimento, Float salario,  ContaCorrente contaCorrente) {
         this.cpf = cpf;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
         this.salario = salario;
+        this.contaCorrente = contaCorrente;
     };
 
     public String getCpf() { return this.cpf; };
@@ -26,14 +27,11 @@ public class Cliente {
 
     public ContaCorrente getContaCorrente() { return this.contaCorrente; };
 
-    public void setCpf(String cpf) { this.cpf = cpf; }
-
     public void setNome(String nome) { this.nome = nome; }
 
-    public void setdataNascimento(LocalDate dataNascimento) { this.dataNascimento = dataNascimento; }
+    public void setDataNascimento(LocalDate dataNascimento) { this.dataNascimento = dataNascimento; }
 
     public void setSalario(Float salario) { this.salario = salario; }
-
 
 
 };

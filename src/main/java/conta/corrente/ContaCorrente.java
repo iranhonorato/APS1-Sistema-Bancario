@@ -1,4 +1,4 @@
-package ContaCorrente;
+package conta.corrente;
 
 public class ContaCorrente {
     private String agencia;

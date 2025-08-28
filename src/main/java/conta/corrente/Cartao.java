@@ -1,4 +1,4 @@
-package ContaCorrente;
+package conta.corrente;
 
 import java.time.LocalDate;
 
