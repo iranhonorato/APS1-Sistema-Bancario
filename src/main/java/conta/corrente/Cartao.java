@@ -48,7 +48,7 @@ public class Cartao {
             return true;
         } else if (this.status == "CANCELADO") {
             this.status = "ATIVO";
-        }
+        };
         return false;
     };
 
