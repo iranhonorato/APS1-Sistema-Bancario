@@ -8,7 +8,6 @@ public class Movimentacao {
     private Tipo tipo;
     private LocalDate data;
 
-
     public Movimentacao(Float valor, Tipo tipo, LocalDate data) {
         this.valor = valor;
         this.tipo = tipo;

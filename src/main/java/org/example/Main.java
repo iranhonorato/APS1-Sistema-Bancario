@@ -15,7 +15,7 @@ public class Main {
                     4 - Ver Saldo 
                     5 - Ver Limite
                     6 - Ver Cartões
-                    6 - Encerrar a Operação 
+                    10 - Encerrar a Operação 
                     """);
             System.out.println("\n");
 
@@ -33,7 +33,7 @@ public class Main {
                 System.out.println("Você escolheu Encerrar o protocolo");
             }
 
-        } while (!opcao.equals("6"));
+        } while (!opcao.equals("10"));
 
 
     }
