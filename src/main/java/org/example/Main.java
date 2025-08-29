@@ -5,17 +5,17 @@ import cliente.*;
 
 public class Main {
     public static void main(String[] args) {
-        ContaCorrente banco1 = new ContaCorrente("01", "01", 5000f, 10000f);
-        Cliente cliente1 = new Cliente("111.111.111-11", "Iran", LocalDate.of(1912, 1, 1), 2400f, banco1);
         String opcao = "0";
 
         do {
             System.out.println("""
-                    1 - Primeira Operação
-                    2 - Segunda Operação
-                    3 - Terceira Operação
-                    4 - Quarta Operação 
-                    5 - Encerrar a Operação 
+                    1 - Realizar Saque 
+                    2 - Realizar Depósito
+                    3 - Ver Movimentações
+                    4 - Ver Saldo 
+                    5 - Ver Limite
+                    6 - Ver Cartões
+                    6 - Encerrar a Operação 
                     """);
             System.out.println("\n");
 
@@ -33,7 +33,7 @@ public class Main {
                 System.out.println("Você escolheu Encerrar o protocolo");
             }
 
-        } while (!opcao.equals("5"));
+        } while (!opcao.equals("6"));
 
 
     }
