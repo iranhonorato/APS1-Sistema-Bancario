@@ -1,5 +1,7 @@
 package conta.corrente;
 import java.time.LocalDate;
+import java.util.ArrayList;
+
 import static conta.corrente.Movimentacao.Tipo.DEPOSITO;
 import static conta.corrente.Movimentacao.Tipo.SAQUE;
 
@@ -8,6 +10,7 @@ public class ContaCorrente {
     private String numero;
     private Float saldo;
     private Float limite;
+    private ArrayList<Movimentacao> movimentacoes = new ArrayList<>();
 
     public ContaCorrente(String agencia, String numero, Float saldo, Float limite) {
         this.agencia = agencia;
@@ -26,12 +29,13 @@ public class ContaCorrente {
 
 
     public void saque(Float valor) {
-        Movimentacao movimentacao = new Movimentacao(valor, SAQUE, LocalDate.now());
         if (valor == null || valor < 0) {
             System.out.println("Valor inválido");
         };
 
         if (this.saldo >= -this.limite) {
+            Movimentacao movimentacao = new Movimentacao(valor, SAQUE, LocalDate.now());
+            this.movimentacoes.add(movimentacao);
             this.saldo -= valor;
             System.out.println(movimentacao.getTipo() + " de " + movimentacao.getValor() + " na data " + movimentacao.getData());
         }
@@ -39,12 +43,14 @@ public class ContaCorrente {
     };
 
     public void deposito(Float valor) {
-        Movimentacao movimentacao = new Movimentacao(valor, DEPOSITO, LocalDate.now());
         if (valor == null || valor < 0) {
             System.out.println("Valor inválido");
-        };
-        this.saldo += valor;
-        System.out.println(movimentacao.getTipo() + " de " + movimentacao.getValor() + " na data " + movimentacao.getData());
+        } else {
+            Movimentacao movimentacao = new Movimentacao(valor, DEPOSITO, LocalDate.now());
+            this.movimentacoes.add(movimentacao);
+            this.saldo += valor;
+            System.out.println(movimentacao.getTipo() + " de " + movimentacao.getValor() + " na data " + movimentacao.getData());
+        }
 
     }
 
