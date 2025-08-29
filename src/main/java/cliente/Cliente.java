@@ -7,8 +7,9 @@ public class Cliente {
     private String nome;
     private LocalDate dataNascimento;
     private Float salario;
+    private ContaCorrente conta;
 
-    public Cliente(String cpf, String nome, LocalDate dataNascimento, Float salario,  ContaCorrente contaCorrente) {
+    public Cliente(String cpf, String nome, LocalDate dataNascimento, Float salario) {
         this.cpf = cpf;
         this.nome = nome;
         this.dataNascimento = dataNascimento;
@@ -23,5 +24,16 @@ public class Cliente {
     public void setNome(String nome) { this.nome = nome; }
     public void setDataNascimento(LocalDate dataNascimento) { this.dataNascimento = dataNascimento; }
     public void setSalario(Float salario) { this.salario = salario; }
+
+    public void associaConta(ContaCorrente conta) {
+        if (this.conta == null || conta == null) {
+            System.out.println("Conta obrigatória");
+            this.conta = conta;
+            return;
+        } else {
+            System.out.println("Esse Cliente já possui uma conta");
+            return;
+        }
+    }
 
 };
