@@ -1,4 +1,7 @@
 package conta.corrente;
+import java.time.LocalDate;
+import static conta.corrente.Movimentacao.Tipo.DEPOSITO;
+import static conta.corrente.Movimentacao.Tipo.SAQUE;
 
 public class ContaCorrente {
     private String agencia;
@@ -11,38 +14,38 @@ public class ContaCorrente {
         this.numero= numero;
         this.saldo = saldo;
         this.limite = limite;
+
     };
 
     public String getAgencia() { return this.agencia; };
-
     public String getNumero () { return this.numero; };
-
     public Float getSaldo() { return this.saldo; };
-
     public Float getLimite() { return this.limite; };
-
     public void setAgencia(String agencia) { this.agencia = agencia; };
-
     public void setNumero (String numero) { this.numero = numero; };
 
+
     public void saque(Float valor) {
-        if (valor >= 0) {
-            if (this.saldo >= valor) {
-                this.saldo -= valor;
-            } else {
-                System.out.println("Saldo insuficiente");
-            };
-        } else {
-            System.out.println("Escolha um valor positivo");
+        Movimentacao movimentacao = new Movimentacao(valor, SAQUE, LocalDate.now());
+        if (valor == null || valor < 0) {
+            System.out.println("Valor inválido");
         };
+
+        if (this.saldo >= -this.limite) {
+            this.saldo -= valor;
+            System.out.println(movimentacao.getTipo() + " de " + movimentacao.getValor() + " na data " + movimentacao.getData());
+        }
+
     };
 
     public void deposito(Float valor) {
-        if (valor >= 0) {
-            this.saldo += valor;
-        } else {
-            System.out.println("Escolha um valor positivo");
-        }
+        Movimentacao movimentacao = new Movimentacao(valor, DEPOSITO, LocalDate.now());
+        if (valor == null || valor < 0) {
+            System.out.println("Valor inválido");
+        };
+        this.saldo += valor;
+        System.out.println(movimentacao.getTipo() + " de " + movimentacao.getValor() + " na data " + movimentacao.getData());
+
     }
 
 }

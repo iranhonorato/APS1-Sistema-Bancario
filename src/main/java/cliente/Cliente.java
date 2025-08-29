@@ -18,20 +18,12 @@ public class Cliente {
     };
 
     public String getCpf() { return this.cpf; };
-
     public String getNome() { return this.nome; };
-
     public LocalDate getDataNascimento() { return this.dataNascimento; };
-
     public Float getSalario() { return this.salario;};
-
     public ContaCorrente getContaCorrente() { return this.contaCorrente; };
-
     public void setNome(String nome) { this.nome = nome; }
-
     public void setDataNascimento(LocalDate dataNascimento) { this.dataNascimento = dataNascimento; }
-
     public void setSalario(Float salario) { this.salario = salario; }
-
 
 };

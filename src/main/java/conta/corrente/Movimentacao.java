@@ -2,26 +2,23 @@ package conta.corrente;
 import java.time.LocalDate;
 
 public class Movimentacao {
-    private Float valor;
-    private String tipo;
-    private LocalDate data;
-    private ContaCorrente contaCorrente;
+    public enum Tipo { SAQUE, DEPOSITO };
 
-    public Movimentacao(Float valor, String tipo, LocalDate data, ContaCorrente contaCorrente) {
+    private Float valor;
+    private Tipo tipo;
+    private LocalDate data;
+
+
+    public Movimentacao(Float valor, Tipo tipo, LocalDate data) {
         this.valor = valor;
         this.tipo = tipo;
         this.data = data;
-        this.contaCorrente = contaCorrente;
     };
 
+
     public Float getValor() { return this.valor; };
-
-    public String getTipo() { return this.tipo;};
-
+    public Tipo getTipo() { return this.tipo;};
     public LocalDate getData() { return this.data; };
-
-    public ContaCorrente getContaCorrente() { return this.contaCorrente; };
-
 }
 
 

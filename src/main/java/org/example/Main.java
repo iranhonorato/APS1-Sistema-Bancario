@@ -1,9 +1,12 @@
 package org.example;
+import java.time.LocalDate;
+import conta.corrente.*;
+import cliente.*;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        ContaCorrente banco1 = new ContaCorrente("01", "01", 5000f, 10000f);
+        Cliente cliente1 = new Cliente("111.111.111-11", "Iran", LocalDate.of(1912, 1, 1), 2400f, banco1);
         String opcao = "0";
 
         do {

@@ -14,26 +14,19 @@ public class Cartao {
         this.tipo = tipo;
         this.validade = validade;
         this.status = status;
-        this.contaCorrente = contaCorrente;
     };
 
     public String getNumeroCartao() { return this.numeroCartao; };
-
     public String getTipo() { return this.tipo; };
-
     public LocalDate getValidade() { return this.validade; };
-
     public String getStatus() { return this.status; };
-
     public ContaCorrente getContaCorrente() { return this.contaCorrente; };
-
     public void setNumeroCartao(String numeroCartao) { this.numeroCartao = numeroCartao; };
-
     public void setTipo(String tipo) { this.tipo = tipo; };
-
     public void setValidade(LocalDate validade) { this.validade = validade; };
-
     public void setSatus(String status) { this.status = status; };
+
+
 
     public Boolean isExpired(LocalDate dataAtual) {
         if (dataAtual.isAfter(this.validade) || dataAtual.isEqual(this.validade)) {
