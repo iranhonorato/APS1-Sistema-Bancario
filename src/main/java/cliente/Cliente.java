@@ -16,11 +16,13 @@ public class Cliente {
         this.salario = salario;
     };
 
+    // Métodos get
     public String getCpf() { return this.cpf; };
     public String getNome() { return this.nome; };
     public LocalDate getDataNascimento() { return this.dataNascimento; };
     public Float getSalario() { return this.salario;};
 
+    // Métodos set
     public void setNome(String nome) { this.nome = nome; }
     public void setDataNascimento(LocalDate dataNascimento) { this.dataNascimento = dataNascimento; }
     public void setSalario(Float salario) { this.salario = salario; }

@@ -43,17 +43,19 @@ public class ContaCorrente {
 
     //  Cadastra cartão na conta
     public void adicionarCartoes(Cartao cartao) {
-        // Verifica se o cartão já está cadastrado nessa conta
-        for (Cartao c: this.cartoes) {
-            if (cartao == c) {
+
+        // Verifica se já existe um cartão com o mesmo número
+        for (Cartao c : this.cartoes) {
+            if (cartao.getNumeroCartao().equals(c.getNumeroCartao())) {
                 System.out.println("Este cartão já está cadastrado nessa conta");
                 return;
             }
-            // Adiciona cartão na conta
-            this.cartoes.add(cartao);
-            System.out.println("Cartão de número" + cartao.getNumeroCartao() + " Adicionado com sucesso!");
         }
+
+        // Se não encontrou cartão igual, adiciona
+        this.cartoes.add(cartao);
     }
+
 
     // Realiza saque
     public void saque(Float valor) {
